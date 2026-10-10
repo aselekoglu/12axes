@@ -14,11 +14,21 @@ from pathlib import Path
 import secrets
 
 from fastapi import FastAPI, Header, HTTPException, Query, status
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 from research.assignment import DEFAULT_INSTRUMENT, generate_form, load_instrument
 
 app = FastAPI(title="12Axes Research API", version="0.1.0", docs_url=None, redoc_url=None)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[origin.strip() for origin in
+                   os.getenv("RESEARCH_ALLOWED_ORIGINS", "http://localhost:5173").split(",")
+                   if origin.strip() and origin.strip() != "*"],
+    allow_credentials=False,
+    allow_methods=["GET", "POST"],
+    allow_headers=["Authorization", "Content-Type"],
+)
 
 CHOICES = frozenset({
     "STRONGLY_AGREE", "AGREE", "NEUTRAL", "DISAGREE", "STRONGLY_DISAGREE"

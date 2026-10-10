@@ -23,9 +23,7 @@ python -m unittest discover -s research/tests -v
    privacy/legal review, and any ethics authorization required for the research.
 2. Freeze and validate a new approved instrument JSON **with `research_status=APPROVED_FOR_FIELDING`**
    and a different version than draft; obtain a SHA-256 digest, independently verify provenance.
-   The existing `assignment.py` currently accepts **draft-0.1 only**. Before approved fielding,
-   implement version-aware structural validation, freeze `pilot-1.0`, and cross-version tests.
-   Consequently the collection gate currently intentionally cannot be opened successfully.
+   The assignment engine accepts a versioned `pilot-*` schema, but **no approved pilot snapshot is shipped**. The current draft is intentionally ineligible for collection; freezing a real pilot requires expert and ethics review.
 3. Provision a separate, private PostgreSQL with TLS, backups under retention control, restricted DB
    permissions, and run `research/sql/001_sessions.sql`. Never reuse public quiz DB or URLs.
 4. Separate domain/API ingress; HTTPS only, invite-rate-limits, abuse controls and

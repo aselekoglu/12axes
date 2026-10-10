@@ -11,6 +11,7 @@ import hashlib
 import json
 from pathlib import Path
 import random
+import re
 
 ROOT = Path(__file__).resolve().parent
 DEFAULT_INSTRUMENT = ROOT / "instruments" / "draft-0.1" / "instrument.json"
@@ -30,8 +31,13 @@ def _seed(*parts: object) -> int:
 
 def validate_instrument(instrument: dict) -> None:
     """Fail closed for altered or incomplete draft instruments."""
-    if instrument.get("instrument_version") != "draft-0.1":
-        raise ValueError("unexpected instrument version")
+    version = instrument.get("instrument_version", "")
+    approved_pilot = bool(re.fullmatch(r"pilot-[0-9]+\.[0-9]+", version))
+    if version != "draft-0.1" and not approved_pilot:
+        raise ValueError("unsupported instrument version")
+    status = instrument.get("research_status")
+    if status != ("APPROVED_FOR_FIELDING" if approved_pilot else "NOT_APPROVED_FOR_FIELDING"):
+        raise ValueError("instrument status and version are inconsistent")
     axes = [axis["id"] for axis in instrument["axes"]]
     if len(axes) != 12 or len(set(axes)) != 12:
         raise ValueError("instrument must contain 12 unique axes")
