@@ -16,7 +16,7 @@ First select one language / jurisdiction / population (e.g., PT-BR speaking adul
 
 ## Item bank and forms
 
-Source inventory: 240 questions, 20 per axis, 10 LEFT and 10 RIGHT, five separate archetype questions. The \`draft-0.1\` snapshot is retained independent of mutable production JSON.
+Source inventory: 240 questions, 20 per axis, 10 LEFT and 10 RIGHT, five separate archetype questions. The `draft-0.1` snapshot is retained independent of mutable production JSON.
 
 Provisional form design: 72 common items (three of each polarity per axis) + 48 rotating items (two of each polarity per axis): 120 per person; archetype responses evaluated separately from the primary latent model. The current 72 common items were selected **mechanically for infrastructure testing**, *not psychometrically selected*. Expert assessment and cognitive interviews can change items and form design before locking the real pilot instrument.
 

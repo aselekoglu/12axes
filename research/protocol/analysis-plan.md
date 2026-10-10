@@ -20,6 +20,6 @@ The other 168 rotating questions have by-design missingness. Do **not** substitu
 
 ## Planned tooling
 
-R (\`psych\`, \`lavaan\`, \`mirt\`, possibly \`semTools\`), \`renv\` lockfile and Quarto reproducible report. Versions, seeds, cleaning rules and instrument version belong with each analysis artifact. No scientific thresholds or validation metrics are claimed at this stage.
+R (`psych`, `lavaan`, `mirt`, possibly `semTools`), `renv` lockfile and Quarto reproducible report. Versions, seeds, cleaning rules and instrument version belong with each analysis artifact. No scientific thresholds or validation metrics are claimed at this stage.
 
 References: https://lavaan.ugent.be/tutorial/cat.html ; https://philchalmers.github.io/mirt/docs/reference/mirt.html ; https://www.pewresearch.org/politics/2026/06/10/appendix-b-typology-group-creation-and-analysis/
