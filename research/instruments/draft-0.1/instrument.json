@@ -1,0 +1,2947 @@
+{
+  "schema_version": 1,
+  "instrument_version": "draft-0.1",
+  "research_status": "NOT_APPROVED_FOR_FIELDING",
+  "source_repository": "RomanCypherpunk/12axes",
+  "source_commit": "54cec8cc20a240f957d1d52a09d2b70379ee19e1",
+  "source_file_git_blob_shas": {
+    "backend/src/main/resources/data/questions-pool.json": "5ca2edf147d5bebd334ed9201d2427114c7d5cb1",
+    "backend/src/main/resources/data/i18n/en/questions.json": "29cd59e459c4550af07dedde52fd399dbfcff7a9",
+    "backend/src/main/resources/data/archetype-questions.json": "1862f400fbfd22ca5b0b8d57bcbe4b44fe12a6e8",
+    "backend/src/main/resources/data/axes.json": "adeb1d47d11ea1785af18eb90e9370e273b1d1ce"
+  },
+  "scope_note": "Mechanically selected research design draft. Items, translations and constructs require expert content review, cognitive interviews, ethics/privacy approval and freeze before any participant recruitment.",
+  "axes": [
+    {
+      "id": "estrutura",
+      "label": "Estrutura",
+      "left_pole": "Federal",
+      "right_pole": "Unitário"
+    },
+    {
+      "id": "representacao",
+      "label": "Representação",
+      "left_pole": "Democracia",
+      "right_pole": "Autocracia"
+    },
+    {
+      "id": "poder",
+      "label": "Poder",
+      "left_pole": "Segurança",
+      "right_pole": "Liberdade"
+    },
+    {
+      "id": "imigracao",
+      "label": "Imigração",
+      "left_pole": "Assimilação",
+      "right_pole": "Multicultura"
+    },
+    {
+      "id": "diplomacia",
+      "label": "Diplomacia",
+      "left_pole": "Militarista",
+      "right_pole": "Pacifista"
+    },
+    {
+      "id": "intervencao",
+      "label": "Intervenção",
+      "left_pole": "Não intervencionista",
+      "right_pole": "Nacionalista"
+    },
+    {
+      "id": "economia",
+      "label": "Economia",
+      "left_pole": "Público",
+      "right_pole": "Privado"
+    },
+    {
+      "id": "controle",
+      "label": "Controle",
+      "left_pole": "Planejamento",
+      "right_pole": "Livre mercado"
+    },
+    {
+      "id": "comercio",
+      "label": "Comércio",
+      "left_pole": "Protecionismo",
+      "right_pole": "Globalismo"
+    },
+    {
+      "id": "religiao",
+      "label": "Religião",
+      "left_pole": "Irreligioso",
+      "right_pole": "Religioso"
+    },
+    {
+      "id": "moral",
+      "label": "Moral",
+      "left_pole": "Progressista",
+      "right_pole": "Tradicionalista"
+    },
+    {
+      "id": "tecnologia",
+      "label": "Tecnologia",
+      "left_pole": "Tecnologia",
+      "right_pole": "Biologia"
+    }
+  ],
+  "items": [
+    {
+      "id": "estrutura_01",
+      "axis_id": "estrutura",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Estados e municípios devem ter autonomia para decidir sobre seus próprios assuntos, sem depender do governo federal.",
+        "en": "Regional and local governments should decide their own affairs without national interference."
+      }
+    },
+    {
+      "id": "estrutura_02",
+      "axis_id": "estrutura",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O país inteiro deve seguir as mesmas leis, mesmo contra as preferências de cada estado.",
+        "en": "The whole country should follow the same laws, even when its regions prefer otherwise."
+      }
+    },
+    {
+      "id": "estrutura_03",
+      "axis_id": "estrutura",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "As leis sobre assuntos locais devem ser definidas pelos governos municipais ou estaduais.",
+        "en": "Laws on local matters should be made by local governments."
+      }
+    },
+    {
+      "id": "estrutura_04",
+      "axis_id": "estrutura",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Prefiro um currículo escolar nacional único a currículos definidos por cada estado.",
+        "en": "I prefer a single national school curriculum to curricula set by each region."
+      }
+    },
+    {
+      "id": "estrutura_05",
+      "axis_id": "estrutura",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Cada estado deve ter autonomia para elaborar sua própria Constituição, sem interferência do governo federal.",
+        "en": "Each state or province should be free to write its own constitution, without national interference."
+      }
+    },
+    {
+      "id": "estrutura_06",
+      "axis_id": "estrutura",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Prefiro uma polícia nacional única a várias polícias estaduais autônomas.",
+        "en": "I prefer a single national police force to several autonomous regional forces."
+      }
+    },
+    {
+      "id": "estrutura_07",
+      "axis_id": "estrutura",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "A maior parte dos impostos deveria ficar no estado ou município onde foi arrecadada.",
+        "en": "Most tax revenue should remain in the region or municipality where it was collected."
+      }
+    },
+    {
+      "id": "estrutura_08",
+      "axis_id": "estrutura",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A saúde pública deve seguir diretrizes nacionais unificadas, sob coordenação de uma autoridade central.",
+        "en": "Public healthcare should follow uniform national guidelines under a central authority."
+      }
+    },
+    {
+      "id": "estrutura_09",
+      "axis_id": "estrutura",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Estados deveriam ter o direito de se separar do país se a maioria local votar por isso.",
+        "en": "Regions should have the right to secede if a local majority votes for it."
+      }
+    },
+    {
+      "id": "estrutura_10",
+      "axis_id": "estrutura",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Os impostos estaduais devem seguir regras nacionais para evitar conflitos fiscais entre estados.",
+        "en": "Regional taxes should follow national rules to prevent tax disputes between regions."
+      }
+    },
+    {
+      "id": "estrutura_11",
+      "axis_id": "estrutura",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Comunidades indígenas e quilombolas devem poder viver sob regras próprias dentro de seus territórios.",
+        "en": "Indigenous and traditional peoples should be free to live by their own rules in their lands."
+      }
+    },
+    {
+      "id": "estrutura_12",
+      "axis_id": "estrutura",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "As leis trabalhistas devem ser iguais em todos os estados, sem variações regionais.",
+        "en": "Labor laws should be the same in every region, with no regional variations."
+      }
+    },
+    {
+      "id": "estrutura_13",
+      "axis_id": "estrutura",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Cidades deveriam poder criar leis próprias, mesmo diferentes das leis nacionais.",
+        "en": "Municipalities should be able to pass their own laws, even if they differ from national laws."
+      }
+    },
+    {
+      "id": "estrutura_14",
+      "axis_id": "estrutura",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Quando governador e presidente entram em conflito, a palavra final deve ser do presidente.",
+        "en": "When a regional and a national leader disagree, the national leader should have the final say."
+      }
+    },
+    {
+      "id": "estrutura_15",
+      "axis_id": "estrutura",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil deveria ser uma união de estados com ampla autonomia política.",
+        "en": "My country should be a union of regions with broad political autonomy."
+      }
+    },
+    {
+      "id": "estrutura_16",
+      "axis_id": "estrutura",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O governo federal deve poder anular leis estaduais e municipais que contrariem o interesse nacional.",
+        "en": "The national government should be able to annul regional and local laws that harm national interest."
+      }
+    },
+    {
+      "id": "estrutura_17",
+      "axis_id": "estrutura",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Regiões com cultura forte, como o Sul ou o Nordeste, deveriam ter mais autonomia política.",
+        "en": "Regions with a strong cultural identity should have more political autonomy."
+      }
+    },
+    {
+      "id": "estrutura_18",
+      "axis_id": "estrutura",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A separação de um estado não deve ser permitida, mesmo com apoio da população local.",
+        "en": "A region should not be allowed to secede, even with the support of its local population."
+      }
+    },
+    {
+      "id": "estrutura_19",
+      "axis_id": "estrutura",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "A educação pública deve ser administrada pelas prefeituras, não pelo governo federal.",
+        "en": "Public education should be managed by local governments rather than the national government."
+      }
+    },
+    {
+      "id": "estrutura_20",
+      "axis_id": "estrutura",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Governadores e prefeitos devem executar as decisões do governo central em assuntos locais.",
+        "en": "Regional and local leaders should carry out central government decisions on local matters."
+      }
+    },
+    {
+      "id": "representacao_01",
+      "axis_id": "representacao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Eleições livres devem ser mantidas mesmo quando elegem governos ruins.",
+        "en": "Free elections must be kept even when they elect bad governments."
+      }
+    },
+    {
+      "id": "representacao_02",
+      "axis_id": "representacao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Em crises graves, um líder forte deve poder governar sem depender do Congresso.",
+        "en": "In serious crises, a strong leader should be able to govern without depending on the legislature."
+      }
+    },
+    {
+      "id": "representacao_03",
+      "axis_id": "representacao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "A oposição política deve ter o direito de criticar publicamente qualquer governo.",
+        "en": "The political opposition should have the right to criticize any government in public."
+      }
+    },
+    {
+      "id": "representacao_04",
+      "axis_id": "representacao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Prefiro decisões de um pequeno grupo de líderes a poder dividido entre instituições.",
+        "en": "I prefer decisions by a small group of leaders to power divided among institutions."
+      }
+    },
+    {
+      "id": "representacao_05",
+      "axis_id": "representacao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Cortes independentes, como o STF, devem poder anular decisões do governo.",
+        "en": "Independent judges should be able to overturn government decisions."
+      }
+    },
+    {
+      "id": "representacao_06",
+      "axis_id": "representacao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Não deveria haver limite de mandatos para um bom governante.",
+        "en": "There should be no term limits for a good leader."
+      }
+    },
+    {
+      "id": "representacao_07",
+      "axis_id": "representacao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O voto secreto e universal é inegociável, mesmo para eleitores mal informados.",
+        "en": "Secret and universal suffrage is non-negotiable, even for poorly informed voters."
+      }
+    },
+    {
+      "id": "representacao_08",
+      "axis_id": "representacao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Um governante eficiente deveria poder permanecer no poder sem precisar disputar eleições periódicas.",
+        "en": "An effective leader should be able to remain in power without facing regular elections."
+      }
+    },
+    {
+      "id": "representacao_09",
+      "axis_id": "representacao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O povo deveria poder derrubar leis por referendo, sem depender do Congresso.",
+        "en": "The people should be able to overturn laws by referendum, without depending on the legislature."
+      }
+    },
+    {
+      "id": "representacao_10",
+      "axis_id": "representacao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Governantes deveriam ser escolhidos por competência, tradição ou sucessão, em vez de eleições populares.",
+        "en": "Leaders should be chosen by competence, tradition, or succession rather than by popular vote."
+      }
+    },
+    {
+      "id": "representacao_11",
+      "axis_id": "representacao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Eleitores deveriam poder cassar o mandato de um político ruim antes do fim do prazo.",
+        "en": "Voters should be able to recall a bad politician before the end of the term."
+      }
+    },
+    {
+      "id": "representacao_12",
+      "axis_id": "representacao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Eu preferiria um regime autoritário à democracia se ele acelerasse o desenvolvimento do país.",
+        "en": "I would prefer an authoritarian regime to democracy if it accelerated my country's development."
+      }
+    },
+    {
+      "id": "representacao_13",
+      "axis_id": "representacao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Prefiro a alternância de poder entre partidos a um mesmo grupo governando por décadas.",
+        "en": "I prefer power alternating between parties to one group governing for decades."
+      }
+    },
+    {
+      "id": "representacao_14",
+      "axis_id": "representacao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Especialistas escolhidos por mérito deveriam governar sem depender do voto popular.",
+        "en": "Experts selected for their qualifications should govern without being elected by the public."
+      }
+    },
+    {
+      "id": "representacao_15",
+      "axis_id": "representacao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Quem governa deve ter o consentimento e a aprovação das pessoas afetadas por suas decisões.",
+        "en": "Those who govern should have the consent and approval of the people affected by their decisions."
+      }
+    },
+    {
+      "id": "representacao_16",
+      "axis_id": "representacao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O direito de voto deveria ser restrito, nem todo adulto deveria poder votar.",
+        "en": "Not every adult should have the right to vote; voting should be restricted."
+      }
+    },
+    {
+      "id": "representacao_17",
+      "axis_id": "representacao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Prefiro uma sociedade governada por assembleias populares, sem depender de líderes políticos.",
+        "en": "I would prefer a society governed by popular assemblies rather than political leaders."
+      }
+    },
+    {
+      "id": "representacao_18",
+      "axis_id": "representacao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Governar com eficiência importa mais do que garantir espaço à oposição.",
+        "en": "Governing efficiently matters more than guaranteeing space for the opposition."
+      }
+    },
+    {
+      "id": "representacao_19",
+      "axis_id": "representacao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Mesmo um governo eleito com enorme maioria deve respeitar todos os direitos da oposição.",
+        "en": "Even a government elected by a huge majority must respect all the rights of the opposition."
+      }
+    },
+    {
+      "id": "representacao_20",
+      "axis_id": "representacao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Prefiro um regime autoritário estável a uma democracia instável.",
+        "en": "I prefer a stable authoritarian regime to an unstable democracy."
+      }
+    },
+    {
+      "id": "poder_01",
+      "axis_id": "poder",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Operações policiais rigorosas devem ser usadas contra o crime em áreas dominadas por facções.",
+        "en": "Aggressive police operations should be used against crime in areas controlled by criminal groups."
+      }
+    },
+    {
+      "id": "poder_02",
+      "axis_id": "poder",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O consumo de maconha por adultos não deveria ser crime.",
+        "en": "Adult cannabis use should not be a criminal offense."
+      }
+    },
+    {
+      "id": "poder_03",
+      "axis_id": "poder",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Estado deveria poder monitorar conversas digitais para combater e prevenir crimes.",
+        "en": "The state should be allowed to monitor digital conversations to prevent and combat crime."
+      }
+    },
+    {
+      "id": "poder_04",
+      "axis_id": "poder",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A liberdade de expressão deve proteger até opiniões consideradas ofensivas.",
+        "en": "Freedom of speech should protect even opinions considered offensive."
+      }
+    },
+    {
+      "id": "poder_05",
+      "axis_id": "poder",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Câmeras com reconhecimento facial nas ruas deveriam ser ampliadas para reduzir o crime.",
+        "en": "Facial recognition cameras in the streets should be expanded to reduce crime."
+      }
+    },
+    {
+      "id": "poder_06",
+      "axis_id": "poder",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Condutas consensuais entre adultos, como uso de drogas, apostas e prostituição, não deveriam ser criminalizadas.",
+        "en": "Consensual adult activities, such as drug use, gambling and sex work, should not be criminalized."
+      }
+    },
+    {
+      "id": "poder_07",
+      "axis_id": "poder",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Partidos que ameacem a ordem pública deveriam poder ser dissolvidos pelo Estado.",
+        "en": "The state should be able to dissolve political parties that threaten public order."
+      }
+    },
+    {
+      "id": "poder_08",
+      "axis_id": "poder",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Todas as drogas, incluindo cocaína, deveriam ser legalizadas para adultos.",
+        "en": "All drugs, including cocaine, should be legalized for adults."
+      }
+    },
+    {
+      "id": "poder_09",
+      "axis_id": "poder",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O acesso de civis a armas de fogo deve ser severamente restringido.",
+        "en": "Civilian access to firearms should be severely restricted by law."
+      }
+    },
+    {
+      "id": "poder_10",
+      "axis_id": "poder",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Adultos deveriam poder manter armas de fogo em casa para defesa pessoal.",
+        "en": "Adults should be allowed to keep firearms at home for personal protection."
+      }
+    },
+    {
+      "id": "poder_11",
+      "axis_id": "poder",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Em situações graves, o governo deveria poder impor toque de recolher à população.",
+        "en": "In serious situations, the government should be allowed to impose a curfew."
+      }
+    },
+    {
+      "id": "poder_12",
+      "axis_id": "poder",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A eutanásia voluntária deveria ser legalizada para quem sofre de doenças terminais.",
+        "en": "Voluntary euthanasia should be legalized for people suffering from terminal illnesses."
+      }
+    },
+    {
+      "id": "poder_13",
+      "axis_id": "poder",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "A vacinação deve ser obrigatória, mesmo contra a vontade de quem se recusa.",
+        "en": "Vaccination should be mandatory, even against the will of those who refuse."
+      }
+    },
+    {
+      "id": "poder_14",
+      "axis_id": "poder",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Na dúvida sobre a culpa, o Estado deve evitar a condenação mesmo que culpados fiquem livres.",
+        "en": "The state should avoid convicting when guilt is uncertain, even if some guilty people go free."
+      }
+    },
+    {
+      "id": "poder_15",
+      "axis_id": "poder",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "A pena de morte deveria ser adotada para crimes como estupro e assassinato.",
+        "en": "The death penalty should be adopted for crimes such as rape and murder."
+      }
+    },
+    {
+      "id": "poder_16",
+      "axis_id": "poder",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Condutas privadas entre adultos que consintam não deveriam ser criminalizadas.",
+        "en": "Private conduct between consenting adults should not be criminalized."
+      }
+    },
+    {
+      "id": "poder_17",
+      "axis_id": "poder",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O governo deve poder tirar do ar perfis que espalham informações falsas.",
+        "en": "The government should be able to take down accounts that spread false information."
+      }
+    },
+    {
+      "id": "poder_18",
+      "axis_id": "poder",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O governo não deveria poder rastrear as compras feitas por meios de pagamento digitais.",
+        "en": "The government should not be allowed to track purchases made through digital payment systems."
+      }
+    },
+    {
+      "id": "poder_19",
+      "axis_id": "poder",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Suspeitos de terrorismo deveriam poder ser presos sem julgamento até a ameaça passar.",
+        "en": "Terrorism suspects should be held without trial until the threat has passed."
+      }
+    },
+    {
+      "id": "poder_20",
+      "axis_id": "poder",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Ninguém deveria ser obrigado a desbloquear o celular para a polícia.",
+        "en": "No one should be forced to unlock their phone for the police."
+      }
+    },
+    {
+      "id": "imigracao_01",
+      "axis_id": "imigracao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Quem imigra para um país deve aprender o idioma e adotar os costumes locais.",
+        "en": "Those who immigrate to a country should learn the language and adopt local customs."
+      }
+    },
+    {
+      "id": "imigracao_02",
+      "axis_id": "imigracao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Uma sociedade multicultural deve conviver com vários idiomas no dia a dia.",
+        "en": "A multicultural society should embrace several languages in everyday life."
+      }
+    },
+    {
+      "id": "imigracao_03",
+      "axis_id": "imigracao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Sou a favor de fechar as fronteiras à imigração para preservar a identidade cultural do país.",
+        "en": "I support closing the borders to immigration to preserve the country's cultural identity."
+      }
+    },
+    {
+      "id": "imigracao_04",
+      "axis_id": "imigracao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O país deve permitir que imigrantes preservem seus costumes e tradições, mesmo que sejam diferentes.",
+        "en": "A country should let immigrants keep their customs, even when they differ from local ones."
+      }
+    },
+    {
+      "id": "imigracao_05",
+      "axis_id": "imigracao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O país deveria recusar imigrantes que se recusem a respeitar os costumes locais.",
+        "en": "A country should refuse entry to immigrants who reject local customs."
+      }
+    },
+    {
+      "id": "imigracao_06",
+      "axis_id": "imigracao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Imigrantes não deveriam ter que abandonar seus costumes para viver bem no país.",
+        "en": "Immigrants should not have to abandon their customs to live well in the country."
+      }
+    },
+    {
+      "id": "imigracao_07",
+      "axis_id": "imigracao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Prefiro preservar tradições nacionais a acomodar costumes estrangeiros.",
+        "en": "I prefer preserving national traditions to accommodating foreign customs."
+      }
+    },
+    {
+      "id": "imigracao_08",
+      "axis_id": "imigracao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A convivência de diferentes línguas e culturas deve ser incentivada no país.",
+        "en": "The coexistence of different languages and cultures should be encouraged in a country."
+      }
+    },
+    {
+      "id": "imigracao_09",
+      "axis_id": "imigracao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O país deve dar preferência a imigrantes de culturas semelhantes à sua.",
+        "en": "The country should give preference to immigrants from cultures similar to its own."
+      }
+    },
+    {
+      "id": "imigracao_10",
+      "axis_id": "imigracao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "As culturas trazidas por imigrantes devem ter espaço na identidade nacional.",
+        "en": "Cultures brought by immigrants should have a place in a country's national identity."
+      }
+    },
+    {
+      "id": "imigracao_11",
+      "axis_id": "imigracao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "A adaptação aos costumes locais deve ser exigida de quem imigra para um país.",
+        "en": "People who immigrate to a country should be required to adapt to local customs."
+      }
+    },
+    {
+      "id": "imigracao_12",
+      "axis_id": "imigracao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil deve continuar acolhendo imigrantes venezuelanos e haitianos.",
+        "en": "My country should continue to welcome immigrants from countries facing severe crises."
+      }
+    },
+    {
+      "id": "imigracao_13",
+      "axis_id": "imigracao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Dominar a língua predominante deve ser uma prioridade na política de imigração.",
+        "en": "Fluency in the country's main language should be a priority in immigration policy."
+      }
+    },
+    {
+      "id": "imigracao_14",
+      "axis_id": "imigracao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Imigrantes não devem ser julgados pelos costumes atribuídos a seu país de origem.",
+        "en": "Immigrants should not be judged by customs attributed to their country of origin."
+      }
+    },
+    {
+      "id": "imigracao_15",
+      "axis_id": "imigracao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Bairros cujos moradores imigrantes vivem isolados em sua própria cultura criam problemas para o país.",
+        "en": "Neighborhoods whose immigrant residents remain culturally isolated create problems for the country."
+      }
+    },
+    {
+      "id": "imigracao_16",
+      "axis_id": "imigracao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Filhos de imigrantes deveriam poder estudar também na língua dos pais, em escolas bilíngues.",
+        "en": "Children of immigrants should also be able to study in their parents' language in bilingual schools."
+      }
+    },
+    {
+      "id": "imigracao_17",
+      "axis_id": "imigracao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "A imigração deveria ser limitada para preservar a cultura predominante do país.",
+        "en": "Immigration should be limited to preserve the country's predominant culture."
+      }
+    },
+    {
+      "id": "imigracao_18",
+      "axis_id": "imigracao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "As fronteiras deveriam ser abertas para qualquer pessoa pacífica.",
+        "en": "Borders should be open to any peaceful person."
+      }
+    },
+    {
+      "id": "imigracao_19",
+      "axis_id": "imigracao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Imigrantes que rejeitem os costumes locais deveriam perder o direito de permanecer no país.",
+        "en": "Immigrants who reject local customs should lose the right to remain in the country."
+      }
+    },
+    {
+      "id": "imigracao_20",
+      "axis_id": "imigracao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Prefiro uma identidade de cidadão do mundo a uma identidade nacional.",
+        "en": "I prefer an identity as a citizen of the world to a national identity."
+      }
+    },
+    {
+      "id": "diplomacia_01",
+      "axis_id": "diplomacia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Um país deve manter Forças Armadas fortes para ser respeitado no mundo.",
+        "en": "A country should maintain strong armed forces to earn respect abroad."
+      }
+    },
+    {
+      "id": "diplomacia_02",
+      "axis_id": "diplomacia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Negociação e diplomacia devem ser esgotadas antes de qualquer ação militar.",
+        "en": "Negotiation and diplomacy must be exhausted before any military action."
+      }
+    },
+    {
+      "id": "diplomacia_03",
+      "axis_id": "diplomacia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O país deve poder realizar ataques preventivos contra inimigos que se preparam para atacar.",
+        "en": "My country should be able to launch preemptive strikes against enemies preparing to attack."
+      }
+    },
+    {
+      "id": "diplomacia_04",
+      "axis_id": "diplomacia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Prefiro evitar uma guerra mesmo quando ela possa trazer vantagens ao país.",
+        "en": "I prefer avoiding war even when it could benefit my country."
+      }
+    },
+    {
+      "id": "diplomacia_05",
+      "axis_id": "diplomacia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O país deve priorizar gastos militares mesmo quando outras áreas precisam de recursos.",
+        "en": "My country should prioritize military spending even when other areas need resources."
+      }
+    },
+    {
+      "id": "diplomacia_06",
+      "axis_id": "diplomacia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O país deve buscar acordos diplomáticos mesmo que precise fazer concessões a adversários.",
+        "en": "The country should seek diplomatic agreements even if it must make concessions to adversaries."
+      }
+    },
+    {
+      "id": "diplomacia_07",
+      "axis_id": "diplomacia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil deveria desenvolver armas nucleares.",
+        "en": "My country should develop nuclear weapons."
+      }
+    },
+    {
+      "id": "diplomacia_08",
+      "axis_id": "diplomacia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O país deve reduzir seus gastos militares.",
+        "en": "The country should reduce its military spending."
+      }
+    },
+    {
+      "id": "diplomacia_09",
+      "axis_id": "diplomacia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O serviço militar deve ser obrigatório para preparar o país para uma guerra.",
+        "en": "Military service should be compulsory to prepare the country for war."
+      }
+    },
+    {
+      "id": "diplomacia_10",
+      "axis_id": "diplomacia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Acordos de desarmamento deveriam ter prioridade sobre a expansão de arsenais militares.",
+        "en": "Disarmament agreements should take priority over expanding military arsenals."
+      }
+    },
+    {
+      "id": "diplomacia_11",
+      "axis_id": "diplomacia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O país deve priorizar a fabricação nacional de armamentos para sua defesa.",
+        "en": "The country should prioritize domestic weapons manufacturing for its defense."
+      }
+    },
+    {
+      "id": "diplomacia_12",
+      "axis_id": "diplomacia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Nenhuma causa política ou ideológica justifica começar uma guerra.",
+        "en": "No political or ideological cause justifies starting a war."
+      }
+    },
+    {
+      "id": "diplomacia_13",
+      "axis_id": "diplomacia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Estado deve poder realizar espionagem contra outros países.",
+        "en": "The state should be allowed to conduct espionage against other countries."
+      }
+    },
+    {
+      "id": "diplomacia_14",
+      "axis_id": "diplomacia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O país deve apoiar tribunais internacionais que julguem crimes de guerra, mesmo de aliados.",
+        "en": "My country should support international war-crimes courts, even when allies are judged."
+      }
+    },
+    {
+      "id": "diplomacia_15",
+      "axis_id": "diplomacia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil deveria desenvolver armas autônomas letais.",
+        "en": "My country should develop lethal autonomous weapons."
+      }
+    },
+    {
+      "id": "diplomacia_16",
+      "axis_id": "diplomacia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil deveria dialogar até com regimes hostis antes de ameaçá-los militarmente.",
+        "en": "My country should engage in dialogue even with hostile regimes before threatening military action."
+      }
+    },
+    {
+      "id": "diplomacia_17",
+      "axis_id": "diplomacia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil deveria estar pronto para iniciar uma guerra se isso garantir seus interesses vitais.",
+        "en": "My country should be ready to start a war if that secures its vital interests."
+      }
+    },
+    {
+      "id": "diplomacia_18",
+      "axis_id": "diplomacia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil deveria extinguir suas Forças Armadas.",
+        "en": "My country should abolish its armed forces."
+      }
+    },
+    {
+      "id": "diplomacia_19",
+      "axis_id": "diplomacia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O país deve ameaçar uma resposta militar devastadora para dissuadir ataques.",
+        "en": "The country should threaten a devastating military response to deter attacks."
+      }
+    },
+    {
+      "id": "diplomacia_20",
+      "axis_id": "diplomacia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A ONU deveria poder mediar conflitos antes de qualquer ação militar.",
+        "en": "The United Nations should be able to mediate conflicts before any military action."
+      }
+    },
+    {
+      "id": "intervencao_01",
+      "axis_id": "intervencao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Nenhum país tem o direito de tentar mudar o governo de outro.",
+        "en": "No country has the right to try to change another country's government."
+      }
+    },
+    {
+      "id": "intervencao_02",
+      "axis_id": "intervencao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil deve pressionar outros países quando o interesse nacional está em jogo.",
+        "en": "My country should pressure other countries when the national interest is at stake."
+      }
+    },
+    {
+      "id": "intervencao_03",
+      "axis_id": "intervencao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil deveria evitar alianças militares que possam envolvê-lo em conflitos externos.",
+        "en": "My country should avoid military alliances that could draw it into conflicts abroad."
+      }
+    },
+    {
+      "id": "intervencao_04",
+      "axis_id": "intervencao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A política externa deve priorizar a influência do país sobre seus vizinhos.",
+        "en": "Foreign policy should prioritize my country's influence over its neighbors."
+      }
+    },
+    {
+      "id": "intervencao_05",
+      "axis_id": "intervencao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil não deveria enviar soldados para o exterior, nem em missões de paz.",
+        "en": "My country should not send soldiers abroad, not even on peacekeeping missions."
+      }
+    },
+    {
+      "id": "intervencao_06",
+      "axis_id": "intervencao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil deve exercer pressão diplomática para defender interesses brasileiros no exterior.",
+        "en": "My country should exert diplomatic pressure to defend its interests abroad."
+      }
+    },
+    {
+      "id": "intervencao_07",
+      "axis_id": "intervencao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Mesmo diante de um genocídio em um país vizinho, o Brasil não deveria se envolver militarmente.",
+        "en": "My country should not intervene militarily, even to stop a genocide in a neighboring country."
+      }
+    },
+    {
+      "id": "intervencao_08",
+      "axis_id": "intervencao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil deveria poder aplicar sanções quando seus interesses forem ameaçados.",
+        "en": "My country should be allowed to impose sanctions when its interests are threatened."
+      }
+    },
+    {
+      "id": "intervencao_09",
+      "axis_id": "intervencao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Conflitos entre países devem ser resolvidos por organismos internacionais, não por potências.",
+        "en": "Conflicts between countries should be resolved by international organizations, not by great powers."
+      }
+    },
+    {
+      "id": "intervencao_10",
+      "axis_id": "intervencao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil deveria exercer liderança política sobre a América do Sul.",
+        "en": "My country should exercise political leadership over its region."
+      }
+    },
+    {
+      "id": "intervencao_11",
+      "axis_id": "intervencao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil deve evitar blocos que exijam alinhamento automático com outras potências.",
+        "en": "My country should avoid blocs that require automatic alignment with other powers."
+      }
+    },
+    {
+      "id": "intervencao_12",
+      "axis_id": "intervencao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil deve influenciar governos vizinhos quando isso aumenta sua segurança.",
+        "en": "My country should influence neighboring governments when that increases its security."
+      }
+    },
+    {
+      "id": "intervencao_13",
+      "axis_id": "intervencao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Cada povo deve resolver seus próprios problemas, sem interferência de fora.",
+        "en": "Each nation should solve its own problems without outside interference."
+      }
+    },
+    {
+      "id": "intervencao_14",
+      "axis_id": "intervencao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil deveria usar até força militar para garantir seus interesses na América do Sul.",
+        "en": "My country should be willing to use military force to protect its interests in its region."
+      }
+    },
+    {
+      "id": "intervencao_15",
+      "axis_id": "intervencao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil não deveria aplicar sanções a países cujos governos desaprova.",
+        "en": "My country should not impose sanctions on countries whose governments it disapproves of."
+      }
+    },
+    {
+      "id": "intervencao_16",
+      "axis_id": "intervencao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Nenhum tratado internacional deve valer mais do que o interesse nacional.",
+        "en": "No international treaty should count for more than the national interest."
+      }
+    },
+    {
+      "id": "intervencao_17",
+      "axis_id": "intervencao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil deve permanecer neutro em guerras, mesmo sob pressão de aliados.",
+        "en": "My country should remain neutral in wars, even under pressure from allies."
+      }
+    },
+    {
+      "id": "intervencao_18",
+      "axis_id": "intervencao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Defender interesses nacionais deve orientar a atuação do país no exterior.",
+        "en": "Defending national interests should guide my country's actions abroad."
+      }
+    },
+    {
+      "id": "intervencao_19",
+      "axis_id": "intervencao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil não deveria manter bases militares em outros países.",
+        "en": "My country should not maintain military bases in other countries."
+      }
+    },
+    {
+      "id": "intervencao_20",
+      "axis_id": "intervencao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil deve pressionar governos vizinhos que ameacem cidadãos brasileiros.",
+        "en": "My country should pressure neighboring governments that threaten its citizens."
+      }
+    },
+    {
+      "id": "economia_01",
+      "axis_id": "economia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Sou a favor de uma revolução para redistribuir o poder econômico concentrado nas mãos de poucos.",
+        "en": "I support a revolution to redistribute economic power concentrated in the hands of a few."
+      }
+    },
+    {
+      "id": "economia_02",
+      "axis_id": "economia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Serviços públicos deveriam ser prestados por empresas privadas quando houver concorrência.",
+        "en": "Public services should be provided by private companies when there is competition."
+      }
+    },
+    {
+      "id": "economia_03",
+      "axis_id": "economia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Empresas consideradas estratégicas devem permanecer sob controle público.",
+        "en": "Companies considered strategically important should remain under public control."
+      }
+    },
+    {
+      "id": "economia_04",
+      "axis_id": "economia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A saúde deveria funcionar principalmente por meio da iniciativa privada.",
+        "en": "Healthcare should be provided mainly through private enterprise."
+      }
+    },
+    {
+      "id": "economia_05",
+      "axis_id": "economia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Grandes empresas deveriam pertencer a seus trabalhadores, não a donos privados.",
+        "en": "Large companies should belong to their workers rather than private owners."
+      }
+    },
+    {
+      "id": "economia_06",
+      "axis_id": "economia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Estradas e presídios deveriam poder ser administrados por empresas privadas.",
+        "en": "Roads and prisons should be allowed to be run by private companies."
+      }
+    },
+    {
+      "id": "economia_07",
+      "axis_id": "economia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Quando o mercado exclui os pobres, o Estado deve assumir o serviço diretamente.",
+        "en": "When the market excludes the poor, the state should take over the service directly."
+      }
+    },
+    {
+      "id": "economia_08",
+      "axis_id": "economia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A herança familiar deve ser protegida contra políticas de redistribuição de patrimônio.",
+        "en": "Family inheritance should be protected from policies that redistribute wealth."
+      }
+    },
+    {
+      "id": "economia_09",
+      "axis_id": "economia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Saúde, educação e água não deveriam funcionar sob a lógica do lucro.",
+        "en": "Healthcare, education, and water should not operate under the logic of profit."
+      }
+    },
+    {
+      "id": "economia_10",
+      "axis_id": "economia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Os impostos deveriam ser voluntários.",
+        "en": "Taxes should be voluntary."
+      }
+    },
+    {
+      "id": "economia_11",
+      "axis_id": "economia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Estado deveria garantir uma renda básica a todos os cidadãos necessitados.",
+        "en": "The state should guarantee a minimum income to every citizen in need."
+      }
+    },
+    {
+      "id": "economia_12",
+      "axis_id": "economia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A estabilidade vitalícia dos servidores públicos deveria ser reduzida ou eliminada.",
+        "en": "Lifetime job security for public employees should be limited or eliminated."
+      }
+    },
+    {
+      "id": "economia_13",
+      "axis_id": "economia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O poder das grandes empresas privadas deveria ser limitado pelo Estado.",
+        "en": "The state should limit the power of large private companies."
+      }
+    },
+    {
+      "id": "economia_14",
+      "axis_id": "economia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Auxílios como o Bolsa Família deveriam ter prazo máximo de duração.",
+        "en": "Cash assistance programs should have a maximum duration."
+      }
+    },
+    {
+      "id": "economia_15",
+      "axis_id": "economia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil deveria redistribuir grandes propriedades rurais por meio de uma reforma agrária.",
+        "en": "My country should redistribute large rural estates through land reform."
+      }
+    },
+    {
+      "id": "economia_16",
+      "axis_id": "economia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Trabalhadores deveriam negociar salários diretamente com os empregadores, sem sindicatos.",
+        "en": "Workers should negotiate wages directly with employers, without unions."
+      }
+    },
+    {
+      "id": "economia_17",
+      "axis_id": "economia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Bancos públicos devem continuar financiando o desenvolvimento do país.",
+        "en": "Public banks should continue to finance the country's development."
+      }
+    },
+    {
+      "id": "economia_18",
+      "axis_id": "economia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A propriedade privada deve ser respeitada mesmo quando gera muita desigualdade.",
+        "en": "Private property must be respected even when it generates great inequality."
+      }
+    },
+    {
+      "id": "economia_19",
+      "axis_id": "economia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Prefiro manter estatais sob controle público, mesmo que possam ser vendidas pelo valor de mercado.",
+        "en": "I prefer keeping state-owned companies publicly owned even if they could be sold at market value."
+      }
+    },
+    {
+      "id": "economia_20",
+      "axis_id": "economia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A gestão de serviços públicos deveria priorizar o setor privado.",
+        "en": "Private companies should take priority in the management of public services."
+      }
+    },
+    {
+      "id": "controle_01",
+      "axis_id": "controle",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O governo deve planejar setores estratégicos como energia, moradia e indústria.",
+        "en": "The government should plan strategic sectors such as energy, housing, and industry."
+      }
+    },
+    {
+      "id": "controle_02",
+      "axis_id": "controle",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Preços e salários deveriam ser definidos pelo mercado, sem intervenção do governo.",
+        "en": "Prices and wages should be set by the market without government intervention."
+      }
+    },
+    {
+      "id": "controle_03",
+      "axis_id": "controle",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Banco Central deve obedecer ao governo eleito, e não agir com independência total.",
+        "en": "The central bank should obey the elected government, not act with total independence."
+      }
+    },
+    {
+      "id": "controle_04",
+      "axis_id": "controle",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Empresas devem definir relações de trabalho com o mínimo de interferência do governo.",
+        "en": "Companies should set the terms of employment with minimal government interference."
+      }
+    },
+    {
+      "id": "controle_05",
+      "axis_id": "controle",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Grandes fortunas devem pagar mais impostos para financiar políticas públicas.",
+        "en": "The wealthiest people should pay more taxes to fund public programs."
+      }
+    },
+    {
+      "id": "controle_06",
+      "axis_id": "controle",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A carga tributária deveria ser reduzida para estimular o crescimento econômico.",
+        "en": "Taxes should be reduced to encourage economic growth."
+      }
+    },
+    {
+      "id": "controle_07",
+      "axis_id": "controle",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Estado deve subsidiar indústrias nacionais estratégicas.",
+        "en": "The state should subsidize strategically important domestic industries."
+      }
+    },
+    {
+      "id": "controle_08",
+      "axis_id": "controle",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A preservação de empregos deve ter prioridade sobre aumentos do salário mínimo.",
+        "en": "Preserving jobs should take priority over minimum-wage increases."
+      }
+    },
+    {
+      "id": "controle_09",
+      "axis_id": "controle",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Em crises graves, o governo deve poder congelar o valor dos aluguéis.",
+        "en": "In serious crises, the government should be able to freeze rents."
+      }
+    },
+    {
+      "id": "controle_10",
+      "axis_id": "controle",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O governo não deveria congelar preços, mesmo em períodos de inflação alta.",
+        "en": "The government should not freeze prices, even during periods of high inflation."
+      }
+    },
+    {
+      "id": "controle_11",
+      "axis_id": "controle",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O governo deveria escolher e apoiar empresas campeãs nacionais em setores estratégicos.",
+        "en": "The government should select and support leading domestic companies in strategic sectors."
+      }
+    },
+    {
+      "id": "controle_12",
+      "axis_id": "controle",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Criptomoedas como o Bitcoin deveriam poder competir livremente com o dinheiro do governo.",
+        "en": "Cryptocurrencies like Bitcoin should be able to compete freely with government money."
+      }
+    },
+    {
+      "id": "controle_13",
+      "axis_id": "controle",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Prefiro uma economia planejada pelo Estado a uma economia de livre mercado.",
+        "en": "I prefer a state-planned economy to a free-market economy."
+      }
+    },
+    {
+      "id": "controle_14",
+      "axis_id": "controle",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Estado deveria evitar novas regulações sobre a atividade econômica.",
+        "en": "The state should avoid new regulations on economic activity."
+      }
+    },
+    {
+      "id": "controle_15",
+      "axis_id": "controle",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Em recessão, o governo deve gastar mais para reaquecer a economia, mesmo aumentando a dívida.",
+        "en": "In a recession, the government should spend more to stimulate the economy, even if debt rises."
+      }
+    },
+    {
+      "id": "controle_16",
+      "axis_id": "controle",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Banco Central deve decidir a taxa de juros sem precisar de aprovação do governo.",
+        "en": "The central bank should set interest rates without needing government approval."
+      }
+    },
+    {
+      "id": "controle_17",
+      "axis_id": "controle",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O governo deve poder controlar a taxa de câmbio para proteger a economia nacional.",
+        "en": "The government should be able to control the exchange rate to protect the national economy."
+      }
+    },
+    {
+      "id": "controle_18",
+      "axis_id": "controle",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Banco Central deveria ser abolido, deixando a moeda e os juros para o mercado.",
+        "en": "The central bank should be abolished, leaving money and interest rates to the market."
+      }
+    },
+    {
+      "id": "controle_19",
+      "axis_id": "controle",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Prefiro um salário mínimo definido por lei à livre negociação dos salários.",
+        "en": "I prefer a legal minimum wage to free wage negotiation."
+      }
+    },
+    {
+      "id": "controle_20",
+      "axis_id": "controle",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Quem tem dinheiro deve poder mandá-lo para fora do país sem pedir licença ao governo.",
+        "en": "People should be able to send their money abroad without asking the government for permission."
+      }
+    },
+    {
+      "id": "comercio_01",
+      "axis_id": "comercio",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "A indústria nacional deve ser protegida com tarifas sempre que necessário.",
+        "en": "Domestic industries should be protected with tariffs whenever necessary."
+      }
+    },
+    {
+      "id": "comercio_02",
+      "axis_id": "comercio",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "As tarifas deveriam ser quase zeradas, mesmo que algumas indústrias nacionais quebrem.",
+        "en": "Tariffs should be cut to almost zero, even if some domestic industries fail."
+      }
+    },
+    {
+      "id": "comercio_03",
+      "axis_id": "comercio",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Prefiro limitar importações para proteger empregos industriais, mesmo com preços mais altos.",
+        "en": "I prefer limiting imports to protect industrial jobs, even if prices rise."
+      }
+    },
+    {
+      "id": "comercio_04",
+      "axis_id": "comercio",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil deveria buscar acordos de livre comércio com outros países.",
+        "en": "My country should pursue free trade agreements with other countries."
+      }
+    },
+    {
+      "id": "comercio_05",
+      "axis_id": "comercio",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil deveria produzir internamente tudo o que consome, mesmo pagando muito mais caro por isso.",
+        "en": "My country should produce domestically everything it consumes, even paying much more for it."
+      }
+    },
+    {
+      "id": "comercio_06",
+      "axis_id": "comercio",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Produtos estrangeiros deveriam entrar no país com poucas restrições econômicas.",
+        "en": "Foreign products should face few economic restrictions when entering the country."
+      }
+    },
+    {
+      "id": "comercio_07",
+      "axis_id": "comercio",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O governo deve limitar importações que ameacem a indústria e o emprego local.",
+        "en": "The government should limit imports that threaten local industry and jobs."
+      }
+    },
+    {
+      "id": "comercio_08",
+      "axis_id": "comercio",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Sou a favor de um mercado global único, sem fronteiras econômicas.",
+        "en": "I support a single global market without economic borders."
+      }
+    },
+    {
+      "id": "comercio_09",
+      "axis_id": "comercio",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Empresas estrangeiras deveriam ser proibidas de comprar empresas estratégicas brasileiras.",
+        "en": "Foreign companies should be banned from buying my country's strategically important companies."
+      }
+    },
+    {
+      "id": "comercio_10",
+      "axis_id": "comercio",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Brasil deveria aprofundar a integração comercial com outros países.",
+        "en": "My country should deepen trade ties with other countries."
+      }
+    },
+    {
+      "id": "comercio_11",
+      "axis_id": "comercio",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "A produção nacional de alimentos deveria ter prioridade sobre importações baratas.",
+        "en": "Domestic food production should take priority over cheap imports."
+      }
+    },
+    {
+      "id": "comercio_12",
+      "axis_id": "comercio",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Sou a favor de facilitar a entrada de investimentos estrangeiros no país.",
+        "en": "I support making it easier for foreign investors to invest in my country."
+      }
+    },
+    {
+      "id": "comercio_13",
+      "axis_id": "comercio",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "As compras do governo e das estatais devem priorizar empresas brasileiras.",
+        "en": "Purchases by governments and state-owned companies should give priority to domestic companies."
+      }
+    },
+    {
+      "id": "comercio_14",
+      "axis_id": "comercio",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O comércio com outros países deve ser ampliado, mesmo aumentando a dependência econômica.",
+        "en": "Trade with other countries should expand even if it increases economic dependence."
+      }
+    },
+    {
+      "id": "comercio_15",
+      "axis_id": "comercio",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Carros elétricos chineses baratos deveriam pagar tarifas para proteger as fábricas locais.",
+        "en": "Cheap imported electric cars should pay tariffs to protect local factories."
+      }
+    },
+    {
+      "id": "comercio_16",
+      "axis_id": "comercio",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "As tarifas de importação devem ser reduzidas, mesmo diminuindo a arrecadação do governo.",
+        "en": "Import tariffs should be reduced even if that lowers government revenue."
+      }
+    },
+    {
+      "id": "comercio_17",
+      "axis_id": "comercio",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Cadeias estratégicas, como remédios e chips, devem ser protegidas da concorrência externa.",
+        "en": "Strategic supply chains, such as medicines and chips, should be protected from foreign competition."
+      }
+    },
+    {
+      "id": "comercio_18",
+      "axis_id": "comercio",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Multinacionais devem poder operar no país, mesmo competindo com empresas locais.",
+        "en": "Multinationals should be free to operate in my country, even if they outcompete local firms."
+      }
+    },
+    {
+      "id": "comercio_19",
+      "axis_id": "comercio",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Prefiro soberania econômica a preços baixos no supermercado.",
+        "en": "I prefer economic sovereignty to low supermarket prices."
+      }
+    },
+    {
+      "id": "comercio_20",
+      "axis_id": "comercio",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A integração econômica global deveria ser aprofundada por meio de mais comércio.",
+        "en": "Global economic integration should be deepened through more trade."
+      }
+    },
+    {
+      "id": "religiao_01",
+      "axis_id": "religiao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Religião é assunto pessoal e não deve influenciar políticas públicas.",
+        "en": "Religion is a personal matter and should not influence public policy."
+      }
+    },
+    {
+      "id": "religiao_02",
+      "axis_id": "religiao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A religião deve orientar minhas escolhas morais e políticas.",
+        "en": "Faith should be the guide for my moral and political choices."
+      }
+    },
+    {
+      "id": "religiao_03",
+      "axis_id": "religiao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "As leis devem ser neutras e não seguir os valores de nenhuma religião.",
+        "en": "Laws should be neutral and not follow the values of any religion."
+      }
+    },
+    {
+      "id": "religiao_04",
+      "axis_id": "religiao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "As leis do país deveriam refletir os valores da religião da maioria.",
+        "en": "The country's laws should reflect the values of the majority religion."
+      }
+    },
+    {
+      "id": "religiao_05",
+      "axis_id": "religiao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Igrejas e templos deveriam pagar impostos como qualquer outra organização.",
+        "en": "Churches and temples should pay taxes like any other organization."
+      }
+    },
+    {
+      "id": "religiao_06",
+      "axis_id": "religiao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A prática religiosa deve ser incentivada na vida em comunidade.",
+        "en": "Religious practice should be encouraged in community life."
+      }
+    },
+    {
+      "id": "religiao_07",
+      "axis_id": "religiao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Prédios públicos, como escolas e tribunais, não deveriam exibir símbolos religiosos.",
+        "en": "Public buildings, such as schools and courts, should not display religious symbols."
+      }
+    },
+    {
+      "id": "religiao_08",
+      "axis_id": "religiao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Estado brasileiro deveria assumir oficialmente uma identidade religiosa.",
+        "en": "My country should officially adopt a religious identity."
+      }
+    },
+    {
+      "id": "religiao_09",
+      "axis_id": "religiao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "As decisões políticas não devem se basear em crenças religiosas.",
+        "en": "Political decisions should not be based on religious beliefs."
+      }
+    },
+    {
+      "id": "religiao_10",
+      "axis_id": "religiao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Tradições religiosas devem ser transmitidas às novas gerações.",
+        "en": "Religious traditions should be passed on to future generations."
+      }
+    },
+    {
+      "id": "religiao_11",
+      "axis_id": "religiao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Prefiro uma sociedade sem religião a uma sociedade religiosa.",
+        "en": "I prefer a society without religion to a religious one."
+      }
+    },
+    {
+      "id": "religiao_12",
+      "axis_id": "religiao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A sociedade deveria dar mais espaço à fé em Deus.",
+        "en": "Society should give more room to religious faith."
+      }
+    },
+    {
+      "id": "religiao_13",
+      "axis_id": "religiao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Feriados religiosos não deveriam ser feriados nacionais.",
+        "en": "Religious holidays should not be national public holidays."
+      }
+    },
+    {
+      "id": "religiao_14",
+      "axis_id": "religiao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O casamento deve ser reconhecido como uma instituição religiosa.",
+        "en": "Marriage should be recognized as a religious institution."
+      }
+    },
+    {
+      "id": "religiao_15",
+      "axis_id": "religiao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "A palavra 'Deus' não deveria aparecer na Constituição.",
+        "en": "The word 'God' should not appear in the constitution."
+      }
+    },
+    {
+      "id": "religiao_16",
+      "axis_id": "religiao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Prefiro buscar na fé religiosa o sentido da minha vida.",
+        "en": "I prefer to seek the meaning of my life in religious faith."
+      }
+    },
+    {
+      "id": "religiao_17",
+      "axis_id": "religiao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "A religião não deveria fazer parte da educação de crianças pequenas.",
+        "en": "Religion should not be part of young children's education."
+      }
+    },
+    {
+      "id": "religiao_18",
+      "axis_id": "religiao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Quando uma lei contraria minha fé religiosa, devo seguir minha fé.",
+        "en": "When a law conflicts with my religious faith, I should follow my faith."
+      }
+    },
+    {
+      "id": "religiao_19",
+      "axis_id": "religiao",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "A moral pública deve ser fundamentada em princípios que não dependam da crença em Deus.",
+        "en": "Public morality should be grounded in principles that do not depend on belief in God."
+      }
+    },
+    {
+      "id": "religiao_20",
+      "axis_id": "religiao",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O Estado deve proteger a fé religiosa como parte da identidade nacional.",
+        "en": "The state should protect religious faith as part of the national identity."
+      }
+    },
+    {
+      "id": "moral_01",
+      "axis_id": "moral",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Casais do mesmo sexo devem ter o mesmo direito de adotar crianças que outros casais.",
+        "en": "Same-sex couples should have the same right to adopt children as other couples."
+      }
+    },
+    {
+      "id": "moral_02",
+      "axis_id": "moral",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A família tradicional deve servir de modelo para a sociedade.",
+        "en": "The traditional family should serve as a model for society."
+      }
+    },
+    {
+      "id": "moral_03",
+      "axis_id": "moral",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "A identidade de gênero declarada por cada pessoa deve ser respeitada.",
+        "en": "The gender identity declared by each person must be respected."
+      }
+    },
+    {
+      "id": "moral_04",
+      "axis_id": "moral",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Prefiro mudanças culturais graduais a mudanças culturais rápidas.",
+        "en": "I prefer gradual cultural change to rapid cultural change."
+      }
+    },
+    {
+      "id": "moral_05",
+      "axis_id": "moral",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Sou a favor de cotas raciais no acesso às universidades.",
+        "en": "I support race-based quotas in university admissions."
+      }
+    },
+    {
+      "id": "moral_06",
+      "axis_id": "moral",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O casamento deve ser reconhecido apenas entre um homem e uma mulher.",
+        "en": "Marriage should be recognized only between a man and a woman."
+      }
+    },
+    {
+      "id": "moral_07",
+      "axis_id": "moral",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Casais LGBT devem poder demonstrar afeto em público como qualquer outro casal.",
+        "en": "LGBT couples should be able to show affection in public like any other couple."
+      }
+    },
+    {
+      "id": "moral_08",
+      "axis_id": "moral",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Sou contra cotas raciais no acesso a cargos públicos.",
+        "en": "I oppose race-based quotas for public-service jobs."
+      }
+    },
+    {
+      "id": "moral_09",
+      "axis_id": "moral",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Considero o aborto no início da gravidez moralmente aceitável.",
+        "en": "I consider abortion early in pregnancy morally acceptable."
+      }
+    },
+    {
+      "id": "moral_10",
+      "axis_id": "moral",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Considero o aborto moralmente errado.",
+        "en": "I consider abortion morally wrong."
+      }
+    },
+    {
+      "id": "moral_11",
+      "axis_id": "moral",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Adolescentes deveriam receber educação sobre identidade de gênero.",
+        "en": "Teenagers should receive education about gender identity."
+      }
+    },
+    {
+      "id": "moral_12",
+      "axis_id": "moral",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A educação sexual dos filhos deve seguir os valores da família, não os da escola.",
+        "en": "Children's sex education should follow the family's values, not the school's."
+      }
+    },
+    {
+      "id": "moral_13",
+      "axis_id": "moral",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "A prostituição deve ser reconhecida como um trabalho legítimo.",
+        "en": "Sex work should be recognized as legitimate work."
+      }
+    },
+    {
+      "id": "moral_14",
+      "axis_id": "moral",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A linguagem neutra não deveria ser adotada em nossa sociedade.",
+        "en": "Gender-neutral language should not be adopted by society."
+      }
+    },
+    {
+      "id": "moral_15",
+      "axis_id": "moral",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Devemos reduzir o consumo de carne por respeito aos animais.",
+        "en": "We should reduce meat consumption out of respect for animals."
+      }
+    },
+    {
+      "id": "moral_16",
+      "axis_id": "moral",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Considero o consumo de pornografia moralmente errado.",
+        "en": "I consider pornography use morally wrong."
+      }
+    },
+    {
+      "id": "moral_17",
+      "axis_id": "moral",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Relações abertas e poliamor devem ser tão respeitados quanto o casamento.",
+        "en": "Open relationships and polyamory should be as respected as marriage."
+      }
+    },
+    {
+      "id": "moral_18",
+      "axis_id": "moral",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Cuidar da família deve ser a principal prioridade na vida de uma mulher.",
+        "en": "Caring for the family should be the main priority in a woman's life."
+      }
+    },
+    {
+      "id": "moral_19",
+      "axis_id": "moral",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "A nudez no cinema, na arte e nas praias não deveria ser considerada ofensiva.",
+        "en": "Nudity in films, art, and on beaches should not be considered offensive."
+      }
+    },
+    {
+      "id": "moral_20",
+      "axis_id": "moral",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Os pais devem ser a autoridade final na educação moral dos filhos.",
+        "en": "Parents should be the final authority in their children's moral education."
+      }
+    },
+    {
+      "id": "tecnologia_01",
+      "axis_id": "tecnologia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "A sociedade deve priorizar a inovação tecnológica e a industrialização.",
+        "en": "Society should prioritize technological innovation and industrialization."
+      }
+    },
+    {
+      "id": "tecnologia_02",
+      "axis_id": "tecnologia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Prefiro um modo de vida simples e natural a uma vida com muita tecnologia.",
+        "en": "I prefer a simple, natural way of life to a life full of technology."
+      }
+    },
+    {
+      "id": "tecnologia_03",
+      "axis_id": "tecnologia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Devemos ampliar o uso de IA e automação, mesmo que elimine muitas profissões.",
+        "en": "We should expand the use of AI and automation, even if it eliminates many professions."
+      }
+    },
+    {
+      "id": "tecnologia_04",
+      "axis_id": "tecnologia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Tecnologias que mexem no corpo, na mente ou na reprodução humana devem ser limitadas.",
+        "en": "Technologies that alter the human body, mind, or reproduction should be restricted."
+      }
+    },
+    {
+      "id": "tecnologia_05",
+      "axis_id": "tecnologia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "O cultivo de alimentos transgênicos deve continuar sendo desenvolvido.",
+        "en": "Genetically modified crops should continue to be developed."
+      }
+    },
+    {
+      "id": "tecnologia_06",
+      "axis_id": "tecnologia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "O uso de agrotóxicos deveria ser reduzido, mesmo com perda de produtividade.",
+        "en": "Pesticide use should be reduced, even if that lowers agricultural productivity."
+      }
+    },
+    {
+      "id": "tecnologia_07",
+      "axis_id": "tecnologia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "A mineração na Amazônia deveria ser permitida em áreas preservadas, mesmo com impacto ambiental.",
+        "en": "Mining should be allowed in protected forests, even with some environmental impact."
+      }
+    },
+    {
+      "id": "tecnologia_08",
+      "axis_id": "tecnologia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Prefiro natureza preservada a crescimento industrial acelerado.",
+        "en": "I prefer preserved nature to accelerated industrial growth."
+      }
+    },
+    {
+      "id": "tecnologia_09",
+      "axis_id": "tecnologia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "A edição genética em humanos deve ser permitida para prevenir doenças.",
+        "en": "Human gene editing should be permitted to prevent disease."
+      }
+    },
+    {
+      "id": "tecnologia_10",
+      "axis_id": "tecnologia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Reduzir o consumo de recursos naturais deve ter prioridade no combate ao aquecimento global.",
+        "en": "Reducing the use of natural resources should take priority in the fight against global warming."
+      }
+    },
+    {
+      "id": "tecnologia_11",
+      "axis_id": "tecnologia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "A humanidade deveria investir na exploração de outros planetas.",
+        "en": "Humanity should invest in exploring other planets."
+      }
+    },
+    {
+      "id": "tecnologia_12",
+      "axis_id": "tecnologia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A mineração na Amazônia deveria ser proibida, mesmo com tecnologias de baixo impacto.",
+        "en": "Mining in protected forests should be banned, even with low-impact technology."
+      }
+    },
+    {
+      "id": "tecnologia_13",
+      "axis_id": "tecnologia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Prefiro a vida nas grandes cidades à vida no campo.",
+        "en": "I prefer life in big cities to life in the countryside."
+      }
+    },
+    {
+      "id": "tecnologia_14",
+      "axis_id": "tecnologia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "A edição genética de embriões para aumentar a inteligência deveria ser proibida.",
+        "en": "Gene editing of embryos to increase intelligence should be prohibited."
+      }
+    },
+    {
+      "id": "tecnologia_15",
+      "axis_id": "tecnologia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "Implantes cerebrais para ampliar capacidades mentais de pessoas saudáveis devem ser permitidos.",
+        "en": "Brain implants to enhance the mental abilities of healthy people should be allowed."
+      }
+    },
+    {
+      "id": "tecnologia_16",
+      "axis_id": "tecnologia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Gastos com exploração espacial deveriam ter menos prioridade que a proteção ambiental na Terra.",
+        "en": "Spending on space exploration should take lower priority than environmental protection on Earth."
+      }
+    },
+    {
+      "id": "tecnologia_17",
+      "axis_id": "tecnologia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "A carne cultivada em laboratório deveria substituir parte da pecuária.",
+        "en": "Lab-grown meat should replace some livestock farming."
+      }
+    },
+    {
+      "id": "tecnologia_18",
+      "axis_id": "tecnologia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Prefiro a vida simples no campo à vida nas metrópoles.",
+        "en": "I prefer a simple life in the countryside to life in big cities."
+      }
+    },
+    {
+      "id": "tecnologia_19",
+      "axis_id": "tecnologia",
+      "agree_pole": "LEFT",
+      "weight": 1,
+      "wording": {
+        "pt": "No combate ao aquecimento global, prefiro priorizar soluções tecnológicas à redução do consumo.",
+        "en": "In tackling global warming, I prefer prioritizing technological solutions over reducing consumption."
+      }
+    },
+    {
+      "id": "tecnologia_20",
+      "axis_id": "tecnologia",
+      "agree_pole": "RIGHT",
+      "weight": 1,
+      "wording": {
+        "pt": "Sou contra implantes artificiais para ampliar as capacidades físicas de pessoas saudáveis.",
+        "en": "I oppose artificial implants to enhance the physical abilities of healthy people."
+      }
+    }
+  ],
+  "archetype_questions": [
+    {
+      "id": "sociedade",
+      "label": {
+        "pt": "Sociedade",
+        "en": "Society"
+      },
+      "text": {
+        "pt": "A sociedade deve se apoiar em quê?",
+        "en": "What should society rest on?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "pt": "Fé, família e tradição da nação",
+            "en": "Faith, family and national tradition"
+          },
+          "effects": {
+            "moral": 12,
+            "religiao": 20,
+            "imigracao": 82
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "pt": "Costumes e fé, mudando devagar",
+            "en": "Custom and faith, changing slowly"
+          },
+          "effects": {
+            "moral": 32,
+            "religiao": 42,
+            "imigracao": 60
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "pt": "Cada um vive como quiser",
+            "en": "Live and let live"
+          },
+          "effects": {
+            "moral": 55,
+            "religiao": 60,
+            "imigracao": 40
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "pt": "Igualdade, diversidade e direitos civis",
+            "en": "Equality, diversity and civil rights"
+          },
+          "effects": {
+            "moral": 80,
+            "religiao": 75,
+            "imigracao": 20
+          }
+        },
+        {
+          "id": "E",
+          "text": {
+            "pt": "Tradição e ordem, sem religião",
+            "en": "Tradition and order, without religion"
+          },
+          "effects": {
+            "moral": 25,
+            "religiao": 82,
+            "imigracao": 65
+          }
+        },
+        {
+          "id": "F",
+          "text": {
+            "pt": "Fé a serviço da justiça social",
+            "en": "Faith in service of social justice"
+          },
+          "effects": {
+            "moral": 72,
+            "religiao": 25,
+            "imigracao": 30
+          }
+        }
+      ]
+    },
+    {
+      "id": "poder",
+      "label": {
+        "pt": "Poder",
+        "en": "Power"
+      },
+      "text": {
+        "pt": "Como o poder deve ser organizado?",
+        "en": "How should power be organized?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "pt": "Líder ou partido único, centralizado",
+            "en": "A single leader or party, centralized"
+          },
+          "effects": {
+            "representacao": 15,
+            "estrutura": 18,
+            "poder": 85
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "pt": "Elites decidem, com voto limitado",
+            "en": "Elites decide, with limited voting"
+          },
+          "effects": {
+            "representacao": 40,
+            "estrutura": 38,
+            "poder": 65
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "pt": "Democracia com freios e contrapesos",
+            "en": "Democracy with checks and balances"
+          },
+          "effects": {
+            "representacao": 78,
+            "estrutura": 45,
+            "poder": 42
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "pt": "Estado mínimo ou nenhum",
+            "en": "Little or no state"
+          },
+          "effects": {
+            "representacao": 70,
+            "estrutura": 88,
+            "poder": 12
+          }
+        },
+        {
+          "id": "E",
+          "text": {
+            "pt": "Sem Estado, conselhos ou contratos",
+            "en": "No state, councils or contracts"
+          },
+          "effects": {
+            "representacao": 90,
+            "estrutura": 95,
+            "poder": 8
+          }
+        }
+      ]
+    },
+    {
+      "id": "economia",
+      "label": {
+        "pt": "Economia",
+        "en": "Economy"
+      },
+      "text": {
+        "pt": "Quem deve controlar a produção?",
+        "en": "Who should control production?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "pt": "Produção coletiva e planejada, sem patrões",
+            "en": "Collective, planned production, no bosses"
+          },
+          "effects": {
+            "economia": 92,
+            "controle": 92,
+            "comercio": 80
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "pt": "Cooperativas, Estado social e regulação",
+            "en": "Co-ops, welfare state and regulation"
+          },
+          "effects": {
+            "economia": 76,
+            "controle": 66,
+            "comercio": 55
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "pt": "Mercado com regras e rede de proteção",
+            "en": "Markets with rules and a safety net"
+          },
+          "effects": {
+            "economia": 42,
+            "controle": 44,
+            "comercio": 42
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "pt": "Patrões e sindicatos unidos pelo Estado",
+            "en": "Bosses and unions united by the state"
+          },
+          "effects": {
+            "economia": 65,
+            "controle": 84,
+            "comercio": 88
+          }
+        },
+        {
+          "id": "E",
+          "text": {
+            "pt": "Empresas nacionais protegidas pelo Estado",
+            "en": "National firms shielded by the state"
+          },
+          "effects": {
+            "economia": 38,
+            "controle": 60,
+            "comercio": 80
+          }
+        },
+        {
+          "id": "F",
+          "text": {
+            "pt": "Livre comércio e impostos mínimos",
+            "en": "Free trade and minimal taxes"
+          },
+          "effects": {
+            "economia": 12,
+            "controle": 8,
+            "comercio": 12
+          }
+        }
+      ]
+    },
+    {
+      "id": "mundo",
+      "label": {
+        "pt": "Mundo",
+        "en": "World"
+      },
+      "text": {
+        "pt": "Como o país deve agir no mundo?",
+        "en": "How should the country act abroad?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "pt": "Potência militar influente",
+            "en": "An influential military power"
+          },
+          "effects": {
+            "diplomacia": 85,
+            "intervencao": 15
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "pt": "Defesa forte e aliados próximos",
+            "en": "Strong defense and close allies"
+          },
+          "effects": {
+            "diplomacia": 60,
+            "intervencao": 40
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "pt": "Diplomacia antes da força",
+            "en": "Diplomacy before force"
+          },
+          "effects": {
+            "diplomacia": 30,
+            "intervencao": 62
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "pt": "Armado, mas fora de guerras alheias",
+            "en": "Armed, but out of others' wars"
+          },
+          "effects": {
+            "diplomacia": 70,
+            "intervencao": 80
+          }
+        },
+        {
+          "id": "E",
+          "text": {
+            "pt": "Paz e não intervenção, sempre",
+            "en": "Peace and non-intervention, always"
+          },
+          "effects": {
+            "diplomacia": 8,
+            "intervencao": 90
+          }
+        }
+      ]
+    },
+    {
+      "id": "tecnologia",
+      "label": {
+        "pt": "Tecnologia",
+        "en": "Technology"
+      },
+      "text": {
+        "pt": "Qual deve ser o papel da tecnologia?",
+        "en": "What role should technology play?"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "pt": "Voltar à natureza, sem indústria",
+            "en": "Back to nature, no industry"
+          },
+          "effects": {
+            "tecnologia": 8
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "pt": "Natureza acima do progresso",
+            "en": "Nature before progress"
+          },
+          "effects": {
+            "tecnologia": 30
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "pt": "Equilíbrio entre progresso e natureza",
+            "en": "Balance progress and nature"
+          },
+          "effects": {
+            "tecnologia": 50
+          }
+        },
+        {
+          "id": "D",
+          "text": {
+            "pt": "Tecnologia e indústria como motor",
+            "en": "Technology and industry as the engine"
+          },
+          "effects": {
+            "tecnologia": 72
+          }
+        },
+        {
+          "id": "E",
+          "text": {
+            "pt": "Acelerar a tecnologia, sem freios",
+            "en": "Accelerate technology, no brakes"
+          },
+          "effects": {
+            "tecnologia": 92
+          }
+        }
+      ]
+    }
+  ],
+  "assignment": {
+    "common_ids": [
+      "estrutura_03",
+      "estrutura_09",
+      "estrutura_15",
+      "estrutura_04",
+      "estrutura_10",
+      "estrutura_16",
+      "representacao_03",
+      "representacao_09",
+      "representacao_15",
+      "representacao_04",
+      "representacao_10",
+      "representacao_16",
+      "poder_03",
+      "poder_09",
+      "poder_15",
+      "poder_04",
+      "poder_10",
+      "poder_16",
+      "imigracao_03",
+      "imigracao_09",
+      "imigracao_15",
+      "imigracao_04",
+      "imigracao_10",
+      "imigracao_16",
+      "diplomacia_03",
+      "diplomacia_09",
+      "diplomacia_15",
+      "diplomacia_04",
+      "diplomacia_10",
+      "diplomacia_16",
+      "intervencao_03",
+      "intervencao_09",
+      "intervencao_15",
+      "intervencao_04",
+      "intervencao_10",
+      "intervencao_16",
+      "economia_03",
+      "economia_09",
+      "economia_15",
+      "economia_04",
+      "economia_10",
+      "economia_16",
+      "controle_03",
+      "controle_09",
+      "controle_15",
+      "controle_04",
+      "controle_10",
+      "controle_16",
+      "comercio_03",
+      "comercio_09",
+      "comercio_15",
+      "comercio_04",
+      "comercio_10",
+      "comercio_16",
+      "religiao_03",
+      "religiao_09",
+      "religiao_15",
+      "religiao_04",
+      "religiao_10",
+      "religiao_16",
+      "moral_03",
+      "moral_09",
+      "moral_15",
+      "moral_04",
+      "moral_10",
+      "moral_16",
+      "tecnologia_03",
+      "tecnologia_09",
+      "tecnologia_15",
+      "tecnologia_04",
+      "tecnologia_10",
+      "tecnologia_16"
+    ],
+    "common_per_axis_and_pole": 3,
+    "rotated_per_axis_and_pole": 2,
+    "rotation_cycle_size": 7,
+    "standard_items_per_form": 120,
+    "archetypes_not_in_primary_latent_model": true
+  }
+}

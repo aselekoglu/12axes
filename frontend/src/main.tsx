@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import { lazy, Suspense } from 'react';
+const ResearchPage = lazy(() => import('./research/ResearchPage'));
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { protectTranslatedText } from './utils/translationDom';
 import '@fontsource/poppins/latin-300.css';
@@ -40,7 +42,9 @@ protectTranslatedText(root);
 ReactDOM.createRoot(root).render(
   <React.StrictMode>
     <ErrorBoundary>
-      <App />
+      {window.location.pathname.replace(/\/+$/, '') === '/research' ?
+        <Suspense fallback={<div role="status">Loading research preview…</div>}><ResearchPage /></Suspense>
+        : <App />}
     </ErrorBoundary>
   </React.StrictMode>
 );

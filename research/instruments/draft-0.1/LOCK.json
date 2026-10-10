@@ -1,0 +1,6 @@
+{
+  "instrument_version": "draft-0.1",
+  "snapshot_git_blob_sha": "92f652ccfe4b37a12f34aea15693efc4e6a4a2be",
+  "status": "draft_not_approved",
+  "note": "Change this lock only in a reviewed version-bump commit; immutable snapshot must remain stable throughout a study."
+}

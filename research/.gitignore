@@ -1,0 +1,9 @@
+# Sensitive data must never enter git.
+data/
+exports/
+*.sqlite
+*.sqlite3
+.env
+.env.*
+!*.env.example
+__pycache__/

@@ -21,6 +21,7 @@ export default defineConfig(({ mode }) => {
   const cwd = (globalThis as { process?: { cwd: () => string } }).process?.cwd?.() ?? '.';
   const env = loadEnv(mode, cwd, '');
   const proxyTarget = env.VITE_API_PROXY_TARGET || 'http://localhost:8080';
+  const researchProxyTarget = env.VITE_RESEARCH_API_PROXY_TARGET || 'http://localhost:8090';
 
   return {
     plugins: [react(), asyncCssLinkPlugin(), catalogueDevPlugin()],
@@ -35,6 +36,10 @@ export default defineConfig(({ mode }) => {
       port: 5173,
       strictPort: true,
       proxy: {
+        '/research-api': {
+          target: researchProxyTarget,
+          changeOrigin: true
+        },
         '/api': {
           target: proxyTarget,
           changeOrigin: true,
