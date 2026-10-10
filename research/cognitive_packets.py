@@ -15,12 +15,20 @@ import random
 from research.content_review import _write_csv, verify_snapshot
 from research.assignment import DEFAULT_INSTRUMENT, load_instrument
 
-PROBES = (
-    "In your own words, what is this statement asking?",
-    "What do the important terms mean to you? Which terms seem unclear?",
-    "How did you decide which answer to choose?",
-    "Would the wording mean the same thing in a different political or cultural setting?",
-)
+PROBES = {
+    "en": (
+        "In your own words, what is this statement asking?",
+        "What do the important terms mean to you? Which terms seem unclear?",
+        "How did you decide which answer to choose?",
+        "Would the wording mean the same thing in a different political or cultural setting?",
+    ),
+    "pt": (
+        "Com suas palavras, o que esta afirmação está perguntando?",
+        "O que os termos mais importantes significam para você? Quais parecem ambíguos?",
+        "Como você escolheu sua resposta?",
+        "Esta frase teria o mesmo significado em outro contexto político ou cultural?",
+    ),
+}
 COLUMNS = ["packet_id", "round_id", "instrument_version", "language", "position",
            "item_id", "axis_id", "agree_pole", "question_text", "probe_1",
            "probe_2", "probe_3", "probe_4", "comprehension_issue",
@@ -63,7 +71,7 @@ def make_interview_packet(index: int, language: str = "en", *, round_id: str = "
             "language": language, "position": position, "item_id": item["id"],
             "axis_id": item["axis_id"], "agree_pole": item["agree_pole"],
             "question_text": item["wording"][language],
-            **{f"probe_{k}": probe for k, probe in enumerate(PROBES, 1)},
+            **{f"probe_{k}": probe for k, probe in enumerate(PROBES[language], 1)},
             "comprehension_issue": "", "retrieval_issue": "", "judgment_issue": "",
             "response_mapping_issue": "", "moderator_observation": "",
             "review_action": "",
