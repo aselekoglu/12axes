@@ -64,6 +64,7 @@ class PostgreSQLResearchLifecycle(unittest.TestCase):
             "RESEARCH_CONSENT_VERSION": "ci-synthetic-v1",
             "RESEARCH_INVITE_CODE": "synthetic-test-invite-only",
             "RESEARCH_COLLECTION_ENABLED": "true",
+            "RESEARCH_ETHICS_REFERENCE": "CI_SYNTHETIC_NO_HUMAN_SUBJECTS",
         }
         with (patch.dict(os.environ, env),
               patch("research.service._fielding_settings",
