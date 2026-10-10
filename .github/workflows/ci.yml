@@ -78,6 +78,21 @@ jobs:
         run: python3 -m unittest discover -s research/tests -v
       - name: Phase 2 expert packet and cognitive-rotation checks
         run: python3 -m unittest discover -s research/phase2_tests -v
+      - name: Phase 2 readiness and provenance validation (no humans)
+        run: python3 -m unittest discover -s research/phase2_workflow_tests -v
+      - name: Verify locked 240-question mechanical inventory
+        run: python3 -m research.item_audit
+      - name: Confirm Phase 2 fielding gate remains closed
+        run: |
+          python3 - <<'PY'
+          from research.phase2_workflow import readiness
+          report = readiness()
+          assert not report["can_collect_human_political_opinions"]
+          assert report["editorial"]["missing"] == 480
+          assert not report["gates"]["expert_en_240_complete"]
+          assert not report["gates"]["expert_pt_240_complete"]
+          print("Research fielding gate closed; missing expert evidence is explicit")
+          PY
       - name: Verify item coverage with no interview data
         run: python3 -m research.cognitive_packets --audit
       - name: Synthetic analysis fixture unit tests
