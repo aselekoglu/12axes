@@ -1,0 +1,41 @@
+# Local development only. This preview cannot collect political responses.
+# Run from repository root: docker compose -f research/docker-compose.yml up --build
+services:
+  research-db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: research_dev
+      POSTGRES_USER: research_dev
+      POSTGRES_PASSWORD: ${RESEARCH_DB_PASSWORD:-dev-only-change-me}
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - research_pgdata:/var/lib/postgresql/data
+      - ./sql/001_sessions.sql:/docker-entrypoint-initdb.d/001_sessions.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U research_dev -d research_dev"]
+      interval: 5s
+      timeout: 3s
+      retries: 15
+
+  research-api:
+    build:
+      context: ..
+      dockerfile: research/Dockerfile
+    depends_on:
+      research-db:
+        condition: service_healthy
+    environment:
+      RESEARCH_COLLECTION_ENABLED: "false"
+      RESEARCH_DATABASE_URL: postgresql://research_dev:${RESEARCH_DB_PASSWORD:-dev-only-change-me}@research-db:5432/research_dev
+      RESEARCH_ALLOWED_ORIGINS: http://localhost:5173,http://127.0.0.1:5173
+    ports:
+      - "127.0.0.1:8090:8090"
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /tmp
+
+volumes:
+  research_pgdata:

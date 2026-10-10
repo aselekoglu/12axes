@@ -1,0 +1,12 @@
+# Avoid copying repository history, secrets, or local research records.
+*
+!research/
+!research/**
+research/data/
+research/exports/
+research/.env
+research/.env.*
+**/__pycache__/
+**/*.pyc
+**/*.csv
+**/*.sqlite*
