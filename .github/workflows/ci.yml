@@ -45,3 +45,16 @@ jobs:
       - name: Build frontend and static pages
         working-directory: frontend
         run: npm run build
+
+  research:
+    name: Research instrument and offline assignment tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Verify draft research instrument and rotation invariants
+        run: python3 -m unittest discover -s research/tests -v
+      - name: Simulate assignment coverage without collecting participant data
+        run: python3 -m research.assignment --coverage 14
