@@ -17,6 +17,8 @@ class SyntheticSmokeTests(unittest.TestCase):
             with (folder / "participants.csv").open() as stream:
                 participants = list(csv.DictReader(stream))
             self.assertEqual(len(participants), 14)
+            self.assertEqual({(p["language"], p["split"]) for p in participants},
+                             {("en", "efa"), ("en", "cfa"), ("pt", "efa"), ("pt", "cfa")})
             self.assertTrue(all(row["participant_id"].startswith("FAKE_SYNTHETIC_")
                                 for row in participants))
             with self.assertRaises(FileExistsError):
