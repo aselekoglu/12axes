@@ -45,7 +45,7 @@ def simulate(destination: Path, *, participants: int = 800, seed: int = 20261010
         # Obvious fake IDs; do not infer any scientific factor structure.
         person = f"FAKE_SYNTHETIC_{i:07d}"
         language = ("en", "pt")[i % 2]
-        split = ("efa", "cfa")[i % 2]
+        split = ("efa", "cfa")[(i // 2) % 2]
         done = rng.random() < completion
         rows["participants.csv"].append([person, language, split, int(done),
                                          instrument["instrument_version"]])
