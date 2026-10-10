@@ -8,11 +8,11 @@ separate, opt-in study stack. The legacy product scoring and user quiz are uncha
 | 240 bilingual questions and 5 archetypes, versioned / hash-locked | Implemented |
 | 72 common + 48 rotating, axis/polarity balanced form assignments | Implemented |
 | Read-only research preview with React UI at /research | Implemented (requires research API) |
-| PostgreSQL table definition and separate FastAPI enrollment / submit / withdraw endpoints | Implemented but gated; no production deployment |
+| PostgreSQL table definition and separate FastAPI enrollment / submit / withdraw endpoints | Implemented; real PostgreSQL synthetic lifecycle tested in CI; no production deployment |
 | Strict consent / 18+ / invite / version+SHA study release gates | Implemented, DISABLED |
 | Unit tests and research CI job | Implemented, CI results require verification |
 | Restricted pseudonymized CSV export | Implemented; run only in approved isolated environment |
-| Ordinal EFA/CFA baseline R pipeline | Implemented scaffold, no participant data |
+| Ordinal EFA/CFA baseline R pipeline | Implemented scaffold + synthetic CSV fixtures, no participant data; R dependencies not yet locked |
 | Independent expert review and cognitive interviews | Expert evidence schema/checks implemented; humans have not performed reviews |
 | Approved pilot-1.0 instrument and ethics/privacy approval | Not performed |
 | Recruiting human subjects, collecting data, validating 12 factors | Not performed |
@@ -29,3 +29,9 @@ are available.
 never collect them through the existing anonymous product API, never ship
 invitation credentials or server secrets in frontend artifacts, and never upload
 research data to public GitHub or CI.
+
+## Phase 1 verification
+- Docker Compose local preview and isolated Postgres: `PHASE1.md`.
+- Live PostgreSQL lifecycle CI: `research/integration_tests/`, using synthetic respondents only.
+- API security and retention/monitoring: `OPS.md`.
+- No real participant responses have been collected. Do not enable collection until governance and privacy gates pass.

@@ -28,3 +28,16 @@ and uncertainty rather than presenting a single score as 'scientifically validat
 **Pre-registration required:** independent power simulation, factor-number decision rule,
 handling of local dependence, model-selection multiplicity, DIF, retest reliability,
 sample exclusions, and publication plan. Consider higher-order/fewer-factor models.
+
+## Fictional pipeline fixture
+
+```bash
+python3 -m research.analysis.synthetic /tmp/12axes-fake-data --participants 800
+# This writes a SYNTHETIC_TEST_DATA_ONLY marker and FAKE_SYNTHETIC_ participant IDs.
+# Do not publish factors or results from simulated respondents as empirical evidence.
+```
+
+R package versions are **not yet locked** by renv, so the R pipeline is a
+development scaffold rather than fully reproducible research. Before empirical
+analysis, generate and review a project-specific renv.lock in a pinned R
+environment, and test EFA/CFA under documented package versions.

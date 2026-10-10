@@ -5,6 +5,9 @@
 args <- commandArgs(trailingOnly = TRUE)
 if (length(args) != 2) stop("Usage: Rscript run.R PRIVATE_DATA_DIR NEW_PRIVATE_OUTPUT_DIR")
 input <- normalizePath(args[[1]], mustWork = TRUE)
+if (file.exists(file.path(input, "SYNTHETIC_TEST_DATA_ONLY"))) {
+  warning("SYNTHETIC DEMO DATA — not actual participants or evidence of instrument validity")
+}
 output <- args[[2]]
 if (dir.exists(output)) stop("Output directory must not already exist")
 required <- c("participants.csv", "assignments.csv", "answers.csv")

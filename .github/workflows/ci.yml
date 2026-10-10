@@ -76,6 +76,8 @@ jobs:
         run: python3 -m pip install -r research/requirements.txt "httpx>=0.27,<1"
       - name: Verify draft research instrument and rotation invariants
         run: python3 -m unittest discover -s research/tests -v
+      - name: Synthetic analysis fixture unit tests
+        run: python3 -m unittest discover -s research/analysis -p 'test_*.py' -v
       - name: PostgreSQL lifecycle integration tests (synthetic data only)
         run: python3 -m unittest discover -s research/integration_tests -v
       - name: Validate developer Compose configuration
