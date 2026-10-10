@@ -78,6 +78,20 @@ jobs:
         run: python3 -m unittest discover -s research/tests -v
       - name: Phase 2 expert packet and cognitive-rotation checks
         run: python3 -m unittest discover -s research/phase2_tests -v
+      - name: Phase 2 static item dashboard and candidate blocking tests
+        run: python3 -m unittest discover -s research/phase2_artifact_tests -v
+      - name: Generate no-participant static audit dashboard
+        run: |
+          python3 -m research.item_dashboard --output /tmp/12axes-phase2-audit.html
+          python3 -m research.item_audit --output /tmp/12axes-phase2-audit.json
+      - name: Publish non-sensitive draft audit as CI artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase2-public-question-audit
+          path: |
+            /tmp/12axes-phase2-audit.html
+            /tmp/12axes-phase2-audit.json
+          retention-days: 14
       - name: Phase 2 readiness and provenance validation (no humans)
         run: python3 -m unittest discover -s research/phase2_workflow_tests -v
       - name: Verify locked 240-question mechanical inventory
