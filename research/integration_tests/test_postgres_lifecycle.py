@@ -20,6 +20,7 @@ from fastapi.testclient import TestClient
 
 from research.assignment import load_instrument
 from research import service
+from research import monitoring, retention
 
 
 class PostgreSQLResearchLifecycle(unittest.TestCase):
@@ -118,6 +119,11 @@ class PostgreSQLResearchLifecycle(unittest.TestCase):
             self.assertEqual(row["answers"], answers)
             self.assertEqual(row["archetype_answers"], archetypes)
             self.assertEqual(set(row["assigned_ids"]), set(answers))
+            report = monitoring.summarize(instrument_version="pilot-1.0", connector=self.connect)
+            self.assertEqual(report["sessions"]["assigned"], 1)
+            self.assertEqual(report["sessions"]["completed"], 1)
+            self.assertEqual(len(report["item_completed_response_count"]), 120)
+            self.assertEqual(retention.expire(connector=self.connect), 0)
 
             # Withdrawal remains available after new enrollment is switched off.
             os.environ["RESEARCH_COLLECTION_ENABLED"] = "false"

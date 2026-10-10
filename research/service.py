@@ -13,8 +13,10 @@ import os
 from pathlib import Path
 import secrets
 
-from fastapi import FastAPI, Header, HTTPException, Query, status
+from fastapi import FastAPI, Header, HTTPException, Query, Request, status
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
+from research.security import limiter
 from pydantic import BaseModel, Field
 
 from research.assignment import DEFAULT_INSTRUMENT, generate_form, load_instrument
@@ -29,6 +31,41 @@ app.add_middleware(
     allow_methods=["GET", "POST"],
     allow_headers=["Authorization", "Content-Type"],
 )
+
+
+@app.middleware("http")
+async def sensitive_research_headers(request: Request, call_next):
+    """No caching or referrer leakage; basic single-worker limits for defense in depth."""
+    path = request.url.path
+    if path.startswith("/research-api/") and request.method != "OPTIONS":
+        content_length = request.headers.get("content-length")
+        if content_length and (not content_length.isdecimal() or int(content_length) > 65536):
+            response = JSONResponse(status_code=413, content={"message": "Request body too large"})
+        else:
+            peer = request.client.host if request.client else "unknown"
+            if path == "/research-api/sessions":
+                limit = 12
+                bucket = "enroll"
+            elif path in ("/research-api/session", "/research-api/responses", "/research-api/withdraw"):
+                limit = 60
+                bucket = "participant"
+            else:
+                limit = 120
+                bucket = "public"
+            if (os.getenv("RESEARCH_RATE_LIMIT_ENABLED", "true").lower() == "true"
+                    and not limiter.allow(f"{peer}:{bucket}", limit=limit, window=60)):
+                response = JSONResponse(status_code=429, content={"message": "Rate limit exceeded"},
+                                        headers={"Retry-After": "60"})
+            else:
+                response = await call_next(request)
+    else:
+        response = await call_next(request)
+    if path.startswith("/research-api/"):
+        response.headers["Cache-Control"] = "no-store"
+        response.headers["Referrer-Policy"] = "no-referrer"
+        response.headers["X-Content-Type-Options"] = "nosniff"
+        response.headers["X-Robots-Tag"] = "noindex"
+    return response
 
 CHOICES = frozenset({
     "STRONGLY_AGREE", "AGREE", "NEUTRAL", "DISAGREE", "STRONGLY_DISAGREE"
