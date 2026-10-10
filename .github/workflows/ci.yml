@@ -76,6 +76,10 @@ jobs:
         run: python3 -m pip install -r research/requirements.txt "httpx>=0.27,<1"
       - name: Verify draft research instrument and rotation invariants
         run: python3 -m unittest discover -s research/tests -v
+      - name: Phase 2 expert packet and cognitive-rotation checks
+        run: python3 -m unittest discover -s research/phase2_tests -v
+      - name: Verify item coverage with no interview data
+        run: python3 -m research.cognitive_packets --audit
       - name: Synthetic analysis fixture unit tests
         run: python3 -m unittest discover -s research/analysis -p 'test_*.py' -v
       - name: PostgreSQL lifecycle integration tests (synthetic data only)
