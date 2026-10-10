@@ -84,3 +84,52 @@ jobs:
         run: docker compose -f research/docker-compose.yml config --quiet
       - name: Simulate assignment coverage without collecting participant data
         run: python3 -m research.assignment --coverage 14
+
+  research-docker:
+    name: Research Docker Compose preview smoke test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Start research-only development stack
+        run: docker compose -f research/docker-compose.yml up -d --build --wait
+      - name: Validate API health, draft preview, and disabled collection
+        run: |
+          python3 - <<'PY'
+          import json
+          import time
+          from urllib.request import Request, urlopen
+          from urllib.error import HTTPError
+
+          base = "http://127.0.0.1:8090/research-api"
+          for attempt in range(40):
+              try:
+                  with urlopen(base + "/health", timeout=2) as reply:
+                      health = json.load(reply)
+                  break
+              except Exception:
+                  time.sleep(1)
+          else:
+              raise RuntimeError("Research API failed local health check")
+          assert health["status"] == "ok"
+          assert health["collection_enabled"] is False
+          with urlopen(base + "/preview?form_index=0&lang=en", timeout=15) as reply:
+              preview = json.load(reply)
+          assert preview["instrument_version"] == "draft-0.1"
+          assert len(preview["questions"]) == 120
+          assert len(preview["archetype_questions"]) == 5
+          request = Request(base + "/sessions?lang=en",
+              data=json.dumps({"consent": True, "age_18_plus": True,
+                               "consent_version": "fake", "invite_code": "fake"}).encode(),
+              headers={"Content-Type": "application/json"},
+              method="POST")
+          try:
+              urlopen(request, timeout=5)
+          except HTTPError as error:
+              assert error.code == 503, f"Expected disabled collection HTTP 503; got {error.code}"
+          else:
+              raise AssertionError("Research collection must be disabled in Docker preview")
+          print("Research Docker smoke: read-only preview OK, collection denied")
+          PY
+      - name: Remove synthetic development containers and volumes
+        if: always()
+        run: docker compose -f research/docker-compose.yml down --volumes --remove-orphans
