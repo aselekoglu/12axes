@@ -52,9 +52,9 @@ def _instrument():
     return load_instrument(path)
 
 
-def _fielding_settings() -> tuple[dict, str, str]:
+def _fielding_settings(*, require_collection: bool = False) -> tuple[dict, str, str]:
     """Only allow explicitly approved and immutable study instruments."""
-    if os.getenv("RESEARCH_COLLECTION_ENABLED", "").lower() != "true":
+    if require_collection and os.getenv("RESEARCH_COLLECTION_ENABLED", "").lower() != "true":
         raise HTTPException(503, "Study collection is disabled")
     settings = ["RESEARCH_DATABASE_URL", "RESEARCH_STUDY_SEED", "RESEARCH_TOKEN_PEPPER",
                 "RESEARCH_INVITE_CODE", "RESEARCH_APPROVED_VERSION",
@@ -156,7 +156,7 @@ def preview(form_index: int = Query(0, ge=0, le=100000), lang: str = "en"):
 
 @app.post("/research-api/sessions", status_code=status.HTTP_201_CREATED)
 def create_session(request: ConsentRequest, lang: str = "en"):
-    instrument, pepper, seed = _fielding_settings()
+    instrument, pepper, seed = _fielding_settings(require_collection=True)
     if not request.consent or not request.age_18_plus:
         raise HTTPException(400, "Explicit research consent and adult eligibility required")
     if not hmac.compare_digest(request.consent_version, os.environ["RESEARCH_CONSENT_VERSION"]):
@@ -209,7 +209,7 @@ def get_session(authorization: str | None = Header(None)):
 
 @app.post("/research-api/responses", status_code=status.HTTP_204_NO_CONTENT)
 def submit_responses(request: ResponseRequest, authorization: str | None = Header(None)):
-    instrument, pepper, _ = _fielding_settings()
+    instrument, pepper, _ = _fielding_settings(require_collection=True)
     token_hash = _hash_token(_auth_token(authorization), pepper)
     with _connect() as conn:
         with conn.cursor() as cur:
