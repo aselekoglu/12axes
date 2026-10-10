@@ -49,6 +49,7 @@ export default function ResearchPage() {
   const [consent, setConsent] = useState(false);
   const [adult, setAdult] = useState(false);
   const [invite, setInvite] = useState('');
+  const [resumeToken, setResumeToken] = useState('');
   const [loading, setLoading] = useState(true);
   const [busy, setBusy] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -99,6 +100,25 @@ export default function ResearchPage() {
     finally { setBusy(false); }
   }
 
+  async function resumeSession() {
+    if (!/^[a-f0-9]{64}$/.test(resumeToken)) {
+      setError(pt ? 'Token de sessão inválido.' : 'Invalid session token.');
+      return;
+    }
+    setBusy(true); setError(null);
+    try {
+      const session = await api<{ form: ResearchForm; submitted: boolean }>('/session', {
+        headers: { Authorization: 'Bearer ' + resumeToken },
+      });
+      setToken(resumeToken);
+      setForm(session.form);
+      setSubmitted(session.submitted);
+      setAnswers({}); setArchetype({});
+      setCurrent(0); setResumeToken('');
+    } catch (e) { setError((e as Error).message); }
+    finally { setBusy(false); }
+  }
+
   async function submit() {
     if (!form || !allDone) return;
     if (!token) { setSubmitted(true); return; } // local preview; never uploads answers
@@ -132,7 +152,7 @@ export default function ResearchPage() {
     <p className="research-lead">{pt
       ? 'Avaliamos se as perguntas realmente medem dimensões políticas distintas. Este projeto ainda não é uma escala cientificamente validada.'
       : 'We are testing whether the questions genuinely measure distinct political dimensions. The project is not yet a scientifically validated scale.'}</p>
-    {!token && <div className="research-warning" role="note">
+    {!token && !ENABLE_FIELDING && <div className="research-warning" role="note">
       {pt ? 'Prévia de desenvolvimento: nenhuma resposta é transmitida ou armazenada.' :
         'Development preview: no political answers are transmitted or stored.'}
     </div>}
@@ -140,6 +160,17 @@ export default function ResearchPage() {
     {error && <p className="research-error" role="alert">{error}</p>}
     {!loading && !form && <p>{pt ? 'Inicie a API de pesquisa local na porta 8090.' :
       'Start the local research API on port 8090. The public quiz API is separate.'}</p>}
+    {!token && !withdrawn && <section className="research-panel">
+      <h2>{pt ? 'Retomar ou retirar participação' : 'Resume or withdraw a previous session'}</h2>
+      <p>{pt ? 'Se recebeu um token de participante, pode recuperá-lo nesta aba e retirar os dados, inclusive depois do envio.' :
+        'If you kept a participant token, you can retrieve the session and withdraw stored answers, including after submission.'}</p>
+      <label>{pt ? 'Token de participante' : 'Participant token'}
+        <input type="password" autoComplete="off" value={resumeToken}
+          onChange={e => setResumeToken(e.target.value)} />
+      </label>
+      <button type="button" disabled={busy || !/^[a-f0-9]{64}$/.test(resumeToken)}
+        onClick={resumeSession}>{pt ? 'Recuperar sessão' : 'Recover session'}</button>
+    </section>}
     {form && <>
       <p className="research-caption">Instrument {form.instrument_version} · {count} {pt ? 'itens' : 'items'}</p>
       {ENABLE_FIELDING && !token && !submitted && <section className="research-panel">
@@ -157,7 +188,7 @@ export default function ResearchPage() {
         <p className="research-caption">{pt ? 'O modo de campo exige aprovação externa e está desativado por padrão.' :
           'Real collection requires external authorization and is disabled by default.'}</p>
       </section>}
-      {!submitted && !withdrawn && <section className="research-panel" aria-labelledby="research-question">
+      {!submitted && !withdrawn && (!ENABLE_FIELDING || token) && <section className="research-panel" aria-labelledby="research-question">
         <div className="research-progress-top"><span>{current + 1} / {count}</span>
           <span>{completion} {pt ? 'respondidos' : 'answered'}</span></div>
         <progress value={completion} max={count}/>
