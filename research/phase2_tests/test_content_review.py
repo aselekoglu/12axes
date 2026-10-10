@@ -77,6 +77,7 @@ class Phase2ContentValidationTests(unittest.TestCase):
         self.assertEqual(len({x["item_id"] for x in packet}),24)
         self.assertEqual(len({x["axis_id"] for x in packet}),12)
         self.assertEqual(set(Counter(x["agree_pole"] for x in packet).values()),{12})
+        self.assertIn("suas palavras",packet[0]["probe_1"])
         self.assertEqual(packet,make_interview_packet(3,language="pt"))
         with self.assertRaises(ValueError):
             make_interview_packet(20)
